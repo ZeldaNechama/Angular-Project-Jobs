@@ -1,0 +1,12 @@
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <div>
+        <label for="fullName">Name</label>
+        <input maxlength="20" [(ngModel)]="userInfo.name" [required]="true" name="name" type="text">
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input name="password" type="password" [(ngModel)]="userInfo.password" minlength="8" maxlength="20" [required]="true">
+        <!-- <p *ngIf="f.controls['password'].errors && (f.controls['password'].touched || f.submitted)" class="error-message">Password isn't valid</p> -->
+    </div>
+    <button type="submit">Login</button>
+</form>

@@ -1,41 +1,27 @@
-# Angular-Project-Jobs
-# Angular Job Search Website
+# JobSearch
 
-## Description
-This project describes an Angular application aimed at creating a job search website, utilizing server-side and client-side technologies. The project includes components, models, services, pipes, or custom directives.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.3.
 
-## Project Contents
-1. Server-Side Project:
-   - Action returning a list of job postings.
-   - Action receiving a username and password and returning the corresponding user data, returning null if either data is incorrect.
-2. Angular Client-Side Project:
-   - Definition of data models (Job and User).
-   - Components:
-     1. Main Component - containing the site header and footer, displaying user information, job field, etc.
-     2. Login Component - for user login with validity checks and localStorage storage.
-     3. Job List Component - displaying job listings, enabling filtering and CV submission.
-3. Services: Components handling logic, including server access and form validations.
-4. Custom Pipe or Directive.
+## Development server
 
-## Usage
-- Run the project on a Node.js system.
-- Open the site in a browser using the URL: localhost:PORT.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Installation Instructions
-1. Install Node.js on your computer.
-2. Download the code from the repository.
-3. Open the project using your development environment.
-4. Run the project using the command `npm start`.
-5. Access the site in your browser using the corresponding URL.
+## Code scaffolding
 
-## Additional Features
-- Validation of input in login forms and job details.
-- Filtering and sorting options in the job list.
-- Customized error messages for users.
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Development and Support
-- The project is developed by Zelda Nechama.
-- For any questions or issues, please contact the developers.
+## Build
 
-## License
-[MIT License](link-to-license)
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
