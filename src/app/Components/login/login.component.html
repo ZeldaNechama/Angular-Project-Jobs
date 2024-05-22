@@ -1,6 +1,6 @@
-<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+<form #f="ngForm">
     <div>
-        <label for="fullName">Name</label>
+        <label for="name">Name</label>
         <input maxlength="20" [(ngModel)]="userInfo.name" [required]="true" name="name" type="text">
     </div>
     <div>

@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomePageComponent } from './components/home-page/home-page.component';
-import { LoginComponent } from './components/login/login.component';
-import { JobListComponent } from './components/job-list/job-list.component';
-import { JobComponent } from './components/job/job.component';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { MainComponent } from './Components/main/main.component';
+import { LoginComponent } from './Components/login/login.component';
+import { JobsListComponent } from './Components/jobs-list/jobs-list.component';
+import { JobComponent } from './Components/job/job.component';
+import { PageNotFoundComponent } from './Components/page-not-found/page-not-found.component';
+
 
 
 const routes: Routes = [
-  { path: '', component: HomePageComponent },
+  { path: '', component:MainComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'job-list', component: JobListComponent, children:
+  { path: 'job-list', component: JobsListComponent, children:
       [ { path: 'job', component: JobComponent }]
   },
   {path:'**',component:PageNotFoundComponent}

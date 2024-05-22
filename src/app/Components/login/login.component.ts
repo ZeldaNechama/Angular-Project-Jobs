@@ -1,5 +1,5 @@
 import { Component, Input, ViewChild } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { NgForm} from '@angular/forms';
 import { LoginServiceService } from '../../Services/login-service.service';
 import { user } from '../../Models/user';
 import { fields } from '../../Models/fields';
@@ -15,7 +15,7 @@ export class LoginComponent {
 
   userInfo: any = { password: '', name: '' };
 
-  @Input()
+  //@Input()
   userData: user = { id: 1, name: "chaim", password: "bscsj213", field: fields.BackEnd };
 
   constructor(private loginSvc: LoginServiceService) {}
@@ -25,8 +25,10 @@ export class LoginComponent {
   }
 
  
-  onSubmit(form: NgForm): void {
-    if (form.valid) {
+  onSubmit(): void {
+    if (this.f) {
+      console.log('name'+this.userInfo.name,'password:'+ this.userInfo.password);
+      alert('in sumbit')
       this.loginSvc.login(this.userInfo.name, this.userInfo.password)?.subscribe(res => {
         this.userData = res;
         this.saveData();

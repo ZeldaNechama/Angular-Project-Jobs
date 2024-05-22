@@ -1,26 +1,28 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomePageComponent } from './components/home-page/home-page.component';
-import { LoginComponent } from './components/login/login.component';
-import { JobListComponent } from './components/job-list/job-list.component';
-import { JobComponent } from './components/job/job.component';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { MainComponent } from './Components/main/main.component';
+import { PageNotFoundComponent } from './Components/page-not-found/page-not-found.component';
+import { JobComponent } from './Components/job/job.component';
+import { JobsListComponent } from './Components/jobs-list/jobs-list.component';
+import { LoginComponent } from './Components/login/login.component';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomePageComponent,
+    MainComponent,
     LoginComponent,
-    JobListComponent,
+    JobsListComponent,
     JobComponent,
     PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     provideClientHydration()
