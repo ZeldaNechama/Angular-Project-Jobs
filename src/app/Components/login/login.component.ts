@@ -25,7 +25,7 @@ export class LoginComponent {
   }
 
  
-  onSubmit(): void {
+  onsubmit(): void {
     if (this.f) {
       console.log('name'+this.userInfo.name,'password:'+ this.userInfo.password);
       alert('in sumbit')

@@ -9,7 +9,8 @@ export class LoginServiceService {
 
   constructor(private http:HttpClient) { }
 
-  login(name:string,password:string):Observable<any>|null{
-    return this.http.post('https://localhost:7184/api/Login/GetUser',{name,password});
+  login(name:string,password:string):Observable<any>{
+    const body={name,password};
+    return this.http.post('https://localhost:7184/api/Login',body);
   }
 }
