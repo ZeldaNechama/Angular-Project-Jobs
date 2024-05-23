@@ -1,4 +1,4 @@
-import { Component,Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { user } from '../../Models/user';
 import { fields } from '../../Models/fields';
 
@@ -7,9 +7,18 @@ import { fields } from '../../Models/fields';
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
 })
-export class MainComponent {
-  
+export class MainComponent implements OnInit {
+
   // @Input()
-  user:user={id:1,name:"chaim",password:"bscsj213",field:fields.BackEnd}
+  _user: user = { id: 1, name: "", password: "", field: fields.BackEnd }
+
+  ngOnInit(): void {
+    const storedUser = localStorage.getItem('userdata');
+    if (storedUser) {
+      this._user = JSON.parse(storedUser) as user;
+    }
+  }
+
+
 
 }

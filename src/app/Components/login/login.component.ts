@@ -3,6 +3,7 @@ import { NgForm} from '@angular/forms';
 import { LoginServiceService } from '../../Services/login-service.service';
 import { user } from '../../Models/user';
 import { fields } from '../../Models/fields';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -18,10 +19,12 @@ export class LoginComponent {
   //@Input()
   userData: user = { id: 1, name: "chaim", password: "bscsj213", field: fields.BackEnd };
 
-  constructor(private loginSvc: LoginServiceService) {}
+  constructor(private loginSvc: LoginServiceService,private router:Router) {}
 
   saveData(): void {
-    localStorage.setItem('id', this.userData.id.toString());
+    console.log('in save data');
+    
+    localStorage.setItem('userdata',JSON.stringify(this.userData));
   }
 
  
@@ -32,6 +35,7 @@ export class LoginComponent {
       this.loginSvc.login(this.userInfo.name, this.userInfo.password)?.subscribe(res => {
         this.userData = res;
         this.saveData();
+        this.router.navigate(['job-list'])
       }, error => {
         console.error('Login failed', error);
       });

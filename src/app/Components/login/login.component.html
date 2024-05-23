@@ -1,4 +1,4 @@
-<form #f="ngForm" (onsubmit)="onsubmit()">
+<form #f="ngForm">
     <div>
         <label for="name">Name</label>
         <input maxlength="20" [(ngModel)]="userInfo.name" [required]="true" name="name" type="text">
@@ -8,5 +8,8 @@
         <input name="password" type="password" [(ngModel)]="userInfo.password" minlength="8" maxlength="20" [required]="true">
         <!-- <p *ngIf="f.controls['password'].errors && (f.controls['password'].touched || f.submitted)" class="error-message">Password isn't valid</p> -->
     </div>
-    <button type="submit">Login</button>
+    <button  (click)="onsubmit()">Login</button>
 </form>
+<div>
+    <h2> Hello to {{userData.name}}</h2>
+</div>
