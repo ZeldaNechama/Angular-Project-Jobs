@@ -1,5 +1,5 @@
 export enum fields{
-    FullStackDeveleper,
-    QA,
-    BackEnd
+    FullStackDeveleper="FullStackDeveleper",
+    QA="QA",
+    BackEnd="BackEnd"
 }

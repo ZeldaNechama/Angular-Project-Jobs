@@ -23,7 +23,6 @@ export class LoginComponent {
 
   saveData(): void {
     console.log('in save data');
-    
     localStorage.setItem('userdata',JSON.stringify(this.userData));
   }
 

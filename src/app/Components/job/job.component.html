@@ -1,1 +1,7 @@
-<p>job works!</p>
+<div *ngIf="show" class="Job">
+    <h1>{{jobData?.name}}</h1>
+    <h2>{{jobData?.field}}</h2>
+    <p>Amount of hours:{{jobData?.hours}} Area:{{jobData?.area}}</p>
+    <button (click)="countResume()">send resume to this job</button>
+</div>
+<button (onclick)="showDeatiles()">Show Detailes {{jobData?.name}}</button>

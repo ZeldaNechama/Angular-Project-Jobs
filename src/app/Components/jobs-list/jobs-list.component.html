@@ -1,1 +1,4 @@
-<p>jobs-list works!</p>
+
+    <div *ngFor="let j of viewJobs">
+        <app-job [jobData]="j"></app-job>
+    </div>
