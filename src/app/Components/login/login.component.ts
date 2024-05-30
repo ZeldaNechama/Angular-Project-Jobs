@@ -29,7 +29,7 @@ export class LoginComponent {
  
   onsubmit(): void {
     if (this.f) {
-      console.log('name'+this.userInfo.name,'password:'+ this.userInfo.password);
+      console.log('name'+this.userInfo.name,' password:'+ this.userInfo.password);
       alert('in sumbit')
       this.loginSvc.login(this.userInfo.name, this.userInfo.password)?.subscribe(res => {
         this.userData = res;

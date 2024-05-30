@@ -2,7 +2,8 @@
     <!-- תמונה שמעבירה לעמוד LOGIN -->
     <a></a>
     <h1>Hello to {{_user.name}}</h1>
-    <p>amount of resumes sent today</p>
+    <h2>amount of resumes sent today {{count}}</h2>
+    <a [routerLink]="'job-list'">show jobs for your field</a>
 </header>
 
 <footer>

@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'job-search';
+
+  isRegister():boolean{
+    const storedUser = localStorage.getItem('userdata');
+    return storedUser!=undefined;
+  }
 }

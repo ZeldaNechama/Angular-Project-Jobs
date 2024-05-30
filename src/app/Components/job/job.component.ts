@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 import { job } from '../../Models/Job';
 import { fields } from '../../Models/fields';
 
@@ -10,27 +10,27 @@ import { fields } from '../../Models/fields';
 export class JobComponent {
 
   @Input()
-  jobData:job|null=null
+  jobData: job | null = null
 
-  show:boolean=false
+  show: boolean = false
+  // @Output()
+  static count: number = 0
 
-  count:number=0
-
-  countResume():void{
-    this.count++;
-    localStorage.setItem('countResume',this.count.toString());
+  countResume(): void {
+   JobComponent.count++;
+    localStorage.setItem('countResume', JobComponent.count.toString());
 
   }
 
 
-  getField(){
+  getField() {
     return fields;
   }
-  showDeatiles():void{
+  showDeatiles(): void {
     console.log('inhcgfdg');
-    
-    this.show=true
+
+    this.show = !this.show
 
   }
- 
+
 }
