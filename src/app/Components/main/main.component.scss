@@ -1,0 +1,24 @@
+footer {
+    background-color: #333;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px;
+    border-top: 5px solid #007BFF;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer h1 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    font-weight: normal;
+}
+
+footer h2 {
+    font-size: 1em;
+    margin: 5px 0;
+    font-weight: lighter;
+    color: #bbb;
+}

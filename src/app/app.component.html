@@ -1,4 +1,4 @@
-<div>
+<nav>
   <a [routerLink]="'login'">
     <img data-v-1fb4f86c="" src="https://s3.eu-west-1.amazonaws.com/assets.drushim.co.il/assets/Images/_logo.png"
       width="70px" height="50px" alt="דרושים IL">
@@ -6,9 +6,7 @@
   <a [routerLink]="''">main</a>
   <a *ngIf="isRegister()" [routerLink]="'job-list'">jobs-list</a>
   <a *ngIf="!isRegister()" [routerLink]="'login'">jobs-list</a>
-  
- 
-</div>
+</nav>
 <router-outlet>
 
 </router-outlet>
