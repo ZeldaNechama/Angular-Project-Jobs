@@ -22,3 +22,42 @@ footer h2 {
     font-weight: lighter;
     color: #bbb;
 }
+
+header {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+ 
+}
+
+header h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+header h2 {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+header a {
+    display: inline-block;
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 1em;
+    padding: 10px 20px;
+    border: 1px solid #007BFF;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header a:hover {
+    background-color: #007BFF;
+    color: #fff;
+}

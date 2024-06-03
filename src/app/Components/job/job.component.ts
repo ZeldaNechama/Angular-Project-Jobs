@@ -19,6 +19,7 @@ export class JobComponent {
   countResume(): void {
    JobComponent.count++;
     localStorage.setItem('countResume', JobComponent.count.toString());
+    alert('you just sent your resume to this job ,Good Luck!!')
 
   }
 

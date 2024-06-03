@@ -1,4 +1,5 @@
-<form ngForm class="filter-row">
+<body>
+  <form ngForm class="filter-row">
     <label>Area</label>
     <input name="area" type="text" [(ngModel)]="filterData.area">
     
@@ -15,6 +16,10 @@
   <div *ngFor="let j of viewJobs">
     <app-job [jobData]="j"></app-job>
   </div>
-
   <button appButton type="button" (click)="reset()">reset</button>
+  
+</body>
+
+
+
   

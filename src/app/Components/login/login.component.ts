@@ -29,13 +29,14 @@ export class LoginComponent {
  
   onsubmit(): void {
     if (this.f) {
-      console.log('name'+this.userInfo.name,' password:'+ this.userInfo.password);
-      alert('in sumbit')
+      console.log('name:'+this.userInfo.name,' password:'+ this.userInfo.password);
       this.loginSvc.login(this.userInfo.name, this.userInfo.password)?.subscribe(res => {
         this.userData = res;
         this.saveData();
+        alert('You have logged in sucessfully')
         this.router.navigate(['job-list'])
       }, error => {
+        alert('OOPS, something went wrong,try again.')
         console.error('Login failed', error);
       });
     }

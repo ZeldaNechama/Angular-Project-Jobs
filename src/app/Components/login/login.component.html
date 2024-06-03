@@ -1,14 +1,18 @@
-<form #f="ngForm">
-    <div>
-        <label for="name">Name</label>
-        <input maxlength="20" [(ngModel)]="userInfo.name" required name="name" type="text" #name="ngModel">
-    </div>
-    <div>
-        <label for="password">Password</label>
-        <input name="password" type="password" [(ngModel)]="userInfo.password" minlength="8" maxlength="20" required="true" #password="ngModel">
-        <p *ngIf="password.errors && (password.touched || f.submitted)" class="error-message">Password isn't valid</p>
-    </div>
-    <button appButton type="button" (click)="onsubmit()">Login</button>
-</form>
+<body>
+    <form #f="ngForm">
+        <div>
+            <label for="name">Name</label>
+            <input maxlength="20" [(ngModel)]="userInfo.name" required name="name" type="text" #name="ngModel">
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input name="password" type="password" [(ngModel)]="userInfo.password" minlength="8" maxlength="20" required="true" #password="ngModel">
+            <p *ngIf="password.errors && (password.touched || f.submitted)" class="error-message">Password isn't valid</p>
+        </div>
+        <button appButton type="button" (click)="onsubmit()">Login</button>
+    </form>
+    
+</body>
+
 
 

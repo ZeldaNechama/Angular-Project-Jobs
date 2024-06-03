@@ -1,11 +1,13 @@
-<div *ngIf="show" class="Job">
-    <h1>{{jobData?.name}}</h1>
-    <div [ngSwitch]="jobData?.field">
-        <h2 *ngSwitchCase="getField().FullStackDeveleper">FullStackDeveleper</h2>
-        <h2 *ngSwitchCase="getField().QA">QA</h2>
-        <h2 *ngSwitchCase="getField().BackEnd">BackEnd</h2>
+<body>
+    <div *ngIf="show" class="Job">
+        <h1>{{jobData?.name}}</h1>
+        <div [ngSwitch]="jobData?.field">
+            <h2 *ngSwitchCase="getField().FullStackDeveleper">FullStackDeveleper</h2>
+            <h2 *ngSwitchCase="getField().QA">QA</h2>
+            <h2 *ngSwitchCase="getField().BackEnd">BackEnd</h2>
+        </div>
+        <p>Amount of hours:{{jobData?.hours}} Area:{{jobData?.area}}</p>
+        <button appButton (click)="countResume()">send resume to this job</button>
     </div>
-    <p>Amount of hours:{{jobData?.hours}} Area:{{jobData?.area}}</p>
-    <button appButton (click)="countResume()">send resume to this job</button>
-</div>
-<button  (click)="showDeatiles()">Show/Hide Detailes {{jobData?.name}}</button>
+    <button  (click)="showDeatiles()">Show/Hide Detailes {{jobData?.name}}</button>   
+</body>
