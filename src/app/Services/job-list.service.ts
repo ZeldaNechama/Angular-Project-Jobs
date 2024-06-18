@@ -21,9 +21,7 @@ export class JobListService {
 
   }
   filterByBoth(jobs: job[], area: string, field: fields): job[] {
-    console.log('in filter service both');
-    debugger
-    return jobs.filter(j => j.area === area && j.field === field);
+    return jobs.filter(j => j.area == area && j.field == field);
 
   }
 
